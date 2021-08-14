@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DatabaseGeneration.Data;
+using DatabaseGeneration.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,7 @@ namespace DatabaseGeneration
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -35,11 +37,20 @@ namespace DatabaseGeneration
             });
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("AppDbContext")));
+            
+            services.AddTransient<IProductService, ProductService>();
+
         }
+        
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(options => options.WithOrigins("http://localhost:3000")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

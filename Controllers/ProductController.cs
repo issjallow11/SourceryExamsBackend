@@ -21,7 +21,7 @@ namespace DatabaseGeneration.Controllers
         }
 
         [HttpGet]
-        public IActionResult index()
+        public IActionResult Index()
         {
             try
             {
@@ -34,7 +34,7 @@ namespace DatabaseGeneration.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public IActionResult GetProduct([FromBody] int id)
         {
             try
