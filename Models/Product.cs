@@ -1,10 +1,19 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace DatabaseGeneration.Models
 {
     public class Product
     {
+        
         public int Id { get; set; }
+        
+        [Required]
         public string Name { get; set; }
-        public string Price { get; set; }
+        
+        [Required]
+        public string Currency { get; set; }
+        
+        public string Category { get; set; }
         
     }
 }
