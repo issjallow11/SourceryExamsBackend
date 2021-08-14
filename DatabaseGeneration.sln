@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseGeneration", "DatabaseGeneration.csproj", "{E7C260D7-2B03-49E7-BF8B-2E3BF8465923}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7C260D7-2B03-49E7-BF8B-2E3BF8465923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C260D7-2B03-49E7-BF8B-2E3BF8465923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C260D7-2B03-49E7-BF8B-2E3BF8465923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C260D7-2B03-49E7-BF8B-2E3BF8465923}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
