@@ -1,11 +1,12 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DatabaseGeneration.Models
 {
     public class Product
     {
-        
-        public int Id { get; set; }
+        [Key]   
+        public int ProductId { get; set; }
         
         [Required]
         public string Name { get; set; }
@@ -14,6 +15,8 @@ namespace DatabaseGeneration.Models
         public string Currency { get; set; }
         
         public string Category { get; set; }
+        
+        public List<Order> Orders { get; set; }
         
     }
 }

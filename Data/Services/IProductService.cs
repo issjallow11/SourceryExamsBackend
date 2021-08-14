@@ -7,8 +7,8 @@ namespace DatabaseGeneration.Data.Services
     {
         List<Product> GetAll();
         Product GetById(int id);
-        void AddProduct(Product category);
-        void UpdateProduct(Product category);
+        void AddProduct(Product product);
+        void UpdateProduct(Product product);
         void DeleteProduct(int id);
     }
 }

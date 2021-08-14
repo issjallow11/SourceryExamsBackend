@@ -23,7 +23,7 @@ namespace DatabaseGeneration.Data.Services
         public Product GetById(int id)
         {
             //throw new System.NotImplementedException();
-            return _context.Products.SingleOrDefault(p => p.Id == id);
+            return _context.Products.SingleOrDefault(p => p.ProductId == id);
         }
 
         public void AddProduct(Product product)
@@ -43,7 +43,7 @@ namespace DatabaseGeneration.Data.Services
         public void DeleteProduct(int id)
         {
             //throw new System.NotImplementedException();
-            Product product = _context.Products.SingleOrDefault(p => p.Id == id);
+            Product product = _context.Products.SingleOrDefault(p => p.ProductId == id);
             if (product != null)
             {
                 _context.Products.Remove(product);
